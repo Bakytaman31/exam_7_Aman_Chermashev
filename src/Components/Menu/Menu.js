@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './Menu.css'
 import hamburger from './MenuImages/hamburger.jpg';
 import cheeseburger from './MenuImages/cheeseburger.jpeg';
