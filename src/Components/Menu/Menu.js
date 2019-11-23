@@ -7,6 +7,7 @@ import fries from './MenuImages/fries.jpeg';
 import coffee from './MenuImages/coffee.jpeg';
 import tea from './MenuImages/tea.jpeg';
 import cola from './MenuImages/cola.jpeg';
+import nanoid from 'nanoid'
 
 const Goods = [
     {name: 'Hamburger', price: 80, image: hamburger},
@@ -20,8 +21,8 @@ const Goods = [
 const Menu = props => {
     return (
         <div className='menu'>
-            {Goods.map((good, index) => {
-                return <div className="goodInfo" onClick={() => props.addGood(good)}>
+            {Goods.map(good => {
+                return <div className="goodInfo" onClick={() => props.addGood(good)} key={nanoid()}>
                     <img src={good.image} alt="#"/>
                     {good.name}
                     <p>Price: {good.price} KGS</p>
